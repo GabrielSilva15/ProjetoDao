@@ -39,9 +39,20 @@ public class Program {
         }
 
         System.out.println("=== Test 4: seller insert ===");
-        Seller newSeller = new Seller(null,"Greg","greg@gmail.com",new Date(),400.0, department);
-        sd.insert(newSeller);
-        System.out.println("Inserted! new id = " + newSeller.getId());
+//        Seller newSeller = new Seller(null,"Greg","greg@gmail.com",new Date(),400.0, department);
+//        sd.insert(newSeller);
+//        System.out.println("Inserted! new id = " + newSeller.getId());
+
+        System.out.println("=== Test 5: seller Update ===");
+        seller =sd.findById(6);
+        seller.setName("Rainan");
+        sd.update(seller);
+        System.out.println("Updated");
+
+        list = sd.findAll();
+        for(Seller obj:list){
+            System.out.println(obj);
+        }
 
     }
 }
