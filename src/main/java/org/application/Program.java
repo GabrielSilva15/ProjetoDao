@@ -54,5 +54,17 @@ public class Program {
             System.out.println(obj);
         }
 
+
+        System.out.println("=== Test 6: seller delete ===");
+        int id = 3;
+        sd.deleteById(id);
+        System.out.println("Deleted");
+        list = sd.findAll();
+        for(Seller obj:list){
+            System.out.println(obj);
+        }
+
+
+
     }
 }
