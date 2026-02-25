@@ -38,5 +38,10 @@ public class Program {
             System.out.println(obj);
         }
 
+        System.out.println("=== Test 4: seller insert ===");
+        Seller newSeller = new Seller(null,"Greg","greg@gmail.com",new Date(),400.0, department);
+        sd.insert(newSeller);
+        System.out.println("Inserted! new id = " + newSeller.getId());
+
     }
 }
