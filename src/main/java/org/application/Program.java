@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
+import java.util.List;
 
 
 public class Program {
@@ -24,6 +25,12 @@ public class Program {
         System.out.println(seller);
 
 
+        System.out.println("=== Test 1: seller find by department ===");
+        Department department = new Department(null,1);
+        List<Seller> list = sd.findByDepartment(department);
+        for(Seller obj:list){
+            System.out.println(obj);
+        }
 
     }
 }
